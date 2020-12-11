@@ -8,7 +8,7 @@ module.exports = {
 function find() {
     return db('tasks')
         .leftJoin('projects', 'projects.id', 'tasks.project_id')
-        .select('tasks.id', 'tasks.description', 'projects.name', 'tasks.notes', 'tasks.completed');
+        .select('tasks.id', 'projects.name', 'projects.description', 'tasks.description', 'tasks.notes', 'tasks.completed');
 }
 
 async function create(task) {
