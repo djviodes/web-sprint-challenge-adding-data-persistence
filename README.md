@@ -18,7 +18,7 @@ In this project you will be given a set of requirements and must design a databa
 
 A **project** is what needs to be done and is stored in a `projects` table. We want to store the following data about a project:
 
-- [ ] `id` - unique
+- [] `id` - unique
 - [ ] `name` - required
 - [ ] `description` - optional
 - [ ] `completed` - cannot be `NULL` and has a default value of `false`
