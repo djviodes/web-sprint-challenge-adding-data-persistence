@@ -18,7 +18,7 @@ In this project you will be given a set of requirements and must design a databa
 
 A **project** is what needs to be done and is stored in a `projects` table. We want to store the following data about a project:
 
-- [] `id` - unique
+- [ ] `id` - unique
 - [ ] `name` - required
 - [ ] `description` - optional
 - [ ] `completed` - cannot be `NULL` and has a default value of `false`
@@ -53,11 +53,11 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository. (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Clone your OWN version of the repository. (Not Lambda's by mistake!)
+- [X] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [X] Implement the project on your newly created `<firstName-lastName>` branch.
+- [X] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2: Project Requirements
 
