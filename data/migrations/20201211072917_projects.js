@@ -3,14 +3,14 @@ exports.up = async function (knex) {
     table.increments("id");
     table.string("name").notNullable();
     table.string("description");
-    table.boolean("completed").defaultTo("false");
+    table.string("completed").defaultTo("false");
   });
   await knex.schema.createTable("tasks", (table) => {
     table.increments("id");
     table.string("description").notNullable();
     table.integer("project_id").references("id").inTable("projects");
     table.string("notes");
-    table.boolean("completed").defaultTo("false");
+    table.string("completed").defaultTo("false");
   });
   await knex.schema.createTable("resources", (table) => {
     table.increments("id");
