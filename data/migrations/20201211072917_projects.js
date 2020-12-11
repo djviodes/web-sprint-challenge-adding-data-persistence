@@ -8,7 +8,12 @@ exports.up = async function (knex) {
   await knex.schema.createTable("tasks", (table) => {
     table.increments("id");
     table.string("description").notNullable();
-    table.integer("project_id").references("id").inTable("projects");
+    table
+      .integer("project_id")
+      .unsigned()
+      .notNullable()
+      .references("id")
+      .inTable("projects");
     table.string("notes");
     table.boolean("completed").defaultTo("false");
   });
@@ -18,8 +23,22 @@ exports.up = async function (knex) {
     table.string("description");
   });
   await knex.schema.createTable("projects_resources", (table) => {
-    table.integer("project_id").references("id").inTable("projects");
-    table.integer("resource_id").references("id").inTable("resources");
+    table
+      .integer("project_id")
+      .unsigned()
+      .notNullable()
+      .references("id")
+      .inTable("projects")
+      .onUpdate("CASCADE")
+      .onDelete("CASCADE");
+    table
+      .integer("resource_id")
+      .unsigned()
+      .notNullable()
+      .references("id")
+      .inTable("resources")
+      .onUpdate("CASCADE")
+      .onDelete("CASCADE");
     table.primary(["project_id", "resource_id"]);
   });
 };
