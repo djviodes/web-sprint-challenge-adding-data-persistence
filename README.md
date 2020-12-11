@@ -63,16 +63,16 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 Your finished project must include all of the following requirements:
 
-- [ ] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
-  - [ ] a `project` can have multiple `tasks`.
-  - [ ] a `task` belongs to only one `project`.
-  - [ ] a `project` can use multiple `resources`. Examples of `resources` are: computer, conference room, microphone, delivery van.
-  - [ ] the same `resource` can be used in multiple `projects`.
-  - [ ] when adding `projects` the client must provide a name, the description is optional.
-  - [ ] when adding `resources` the client must provide a unique name, the description is optional.
-  - [ ] when adding a `task` the client must provide a description, the notes are optional.
-  - [ ] when adding a `task` the client must provide a `project_id` that points to the `id` of an existing project.
-  - [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
+- [X] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
+  - [X] a `project` can have multiple `tasks`.
+  - [X] a `task` belongs to only one `project`.
+  - [X] a `project` can use multiple `resources`. Examples of `resources` are: computer, conference room, microphone, delivery van.
+  - [X] the same `resource` can be used in multiple `projects`.
+  - [X] when adding `projects` the client must provide a name, the description is optional.
+  - [X] when adding `resources` the client must provide a unique name, the description is optional.
+  - [X] when adding a `task` the client must provide a description, the notes are optional.
+  - [X] when adding a `task` the client must provide a `project_id` that points to the `id` of an existing project.
+  - [X] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
 - [ ] Build an API inside the `api` folder with endpoints for:
   1. adding a new resource - `[POST] /api/resources`
   2. retrieving all resources - `[GET] /api/resources`
